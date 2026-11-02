@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#fcfcfa">
+  <title>신랑이름 · 신부이름 결혼합니다</title>
+  <meta name="description" content="2027년 5월 15일 토요일 오후 12시 30분, 예식장명">
+  <!-- 배포 도메인 확정 후 og:url / og:image 를 실제 절대 URL로 교체하세요 (README 참고) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="신랑이름 · 신부이름 결혼합니다">
+  <meta property="og:description" content="2027년 5월 15일 토요일 오후 12시 30분, 예식장명">
+  <meta property="og:image" content="https://k-wedding-card.pages.dev/images/og.jpg">
+  <meta property="og:url" content="https://k-wedding-card.pages.dev/">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"><!-- ponytail: 파비콘 404 방지용 빈 아이콘, 원하면 images/favicon.png로 교체 -->
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+<main>
+
+  <!-- 커버 -->
+  <section id="cover" class="cover">
+    <div class="cover-head">
+      <p class="label">Wedding Invitation</p>
+      <p class="display" data-date="dot">2027.05.15</p>
+      <p class="cover-meta"><span data-date="en">SAT 12:30 PM</span><span data-venue="name">예식장명</span></p>
+    </div>
+    <div class="ph ph-cover" data-label="PHOTO">
+      <img src="images/main.jpg" alt="신랑과 신부 메인 사진" onerror="this.hidden=true">
+    </div>
+    <h1 class="names">신랑이름<span class="amp">&amp;</span>신부이름</h1>
+  </section>
+
+  <!-- 인사말 / 혼주 -->
+  <section id="greeting">
+    <p class="label">Invitation</p>
+    <h2>소중한 분들을 초대합니다</h2>
+    <!-- 인사말 문구 교체 -->
+    <p class="greeting-text">
+      서로 다른 길을 걸어온 두 사람이<br>
+      이제 같은 곳을 바라보며 함께 걸어가려 합니다.<br>
+      귀한 걸음 하시어 축복해 주시면<br>
+      더없는 기쁨으로 간직하겠습니다.
+    </p>
+    <ul class="family">
+      <li><span class="parents">혼주 ○○○ · ○○○ <small>의 장남</small></span><strong>신랑이름</strong></li>
+      <li><span class="parents">혼주 ○○○ · ○○○ <small>의 장녀</small></span><strong>신부이름</strong></li>
+    </ul>
+  </section>
+
+  <!-- 캘린더 + D-day -->
+  <section id="calendar">
+    <p class="label">Wedding Day</p>
+    <h2 data-date="ko">2027년 5월 15일 토요일 오후 12시 30분</h2>
+    <div class="cal">
+      <p class="cal-month"><span data-date="month">2027.05</span><span data-date="monthName">MAY</span></p>
+      <ol class="cal-grid cal-head" aria-hidden="true">
+        <li>S</li><li>M</li><li>T</li><li>W</li><li>T</li><li>F</li><li>S</li>
+      </ol>
+      <ol class="cal-grid cal-days" id="cal-days"></ol>
+    </div>
+    <div class="countdown" role="timer" aria-label="예식까지 남은 시간">
+      <div><b id="cd-d">0</b><span>Days</span></div>
+      <div><b id="cd-h">0</b><span>Hours</span></div>
+      <div><b id="cd-m">0</b><span>Min</span></div>
+      <div><b id="cd-s">0</b><span>Sec</span></div>
+    </div>
+    <p class="dday">신랑이름 · 신부이름의 결혼식 <b id="dday">D-0</b></p>
+  </section>
+
+  <!-- 갤러리 (JS가 CONFIG.galleryCount 만큼 생성) -->
+  <section id="gallery">
+    <p class="label">Gallery</p>
+    <h2>우리의 순간</h2>
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </section>
+
+  <!-- 오시는 길 -->
+  <section id="location">
+    <p class="label">Location</p>
+    <h2 data-venue="name">예식장명</h2>
+    <p class="address"><span data-venue="address">주소</span>
+      <button type="button" class="link-btn" id="copy-address">주소 복사</button></p>
+    <p class="muted">○층 ○○홀 · Tel. 02-000-0000</p>
+    <div class="ph ph-map" data-label="MAP">
+      <img src="images/map.jpg" alt="예식장 약도" loading="lazy" onerror="this.hidden=true">
+    </div>
+    <div class="nav-btns">
+      <a id="nav-kakao" target="_blank" rel="noopener">카카오맵</a>
+      <a id="nav-naver" target="_blank" rel="noopener">네이버지도</a>
+      <a id="nav-tmap">T맵</a>
+    </div>
+    <dl class="transport">
+      <dt>지하철</dt><dd>○호선 ○○역 ○번 출구 도보 5분</dd>
+      <dt>버스</dt><dd>○○정류장 하차 · 간선 000, 지선 0000</dd>
+      <dt>주차</dt><dd>건물 내 지하주차장 2시간 무료</dd>
+    </dl>
+  </section>
+
+  <!-- 마음 전하실 곳 -->
+  <section id="account">
+    <p class="label">Account</p>
+    <h2>마음 전하실 곳</h2>
+    <p class="muted center">참석이 어려우신 분들을 위해 계좌번호를 안내드립니다.</p>
+    <details class="acct-group">
+      <summary>신랑측 계좌번호</summary>
+      <ul>
+        <li><div><small>신랑</small><p>은행 000-0000-0000</p><p class="muted">신랑이름</p></div>
+          <button type="button" class="btn-sm" data-copy="000-0000-0000">복사</button></li>
+        <li><div><small>신랑 아버지</small><p>은행 000-0000-0000</p><p class="muted">○○○</p></div>
+          <button type="button" class="btn-sm" data-copy="000-0000-0000">복사</button></li>
+        <li><div><small>신랑 어머니</small><p>은행 000-0000-0000</p><p class="muted">○○○</p></div>
+          <button type="button" class="btn-sm" data-copy="000-0000-0000">복사</button></li>
+      </ul>
+    </details>
+    <details class="acct-group">
+      <summary>신부측 계좌번호</summary>
+      <ul>
+        <li><div><small>신부</small><p>은행 000-0000-0000</p><p class="muted">신부이름</p></div>
+          <button type="button" class="btn-sm" data-copy="000-0000-0000">복사</button></li>
+        <li><div><small>신부 아버지</small><p>은행 000-0000-0000</p><p class="muted">○○○</p></div>
+          <button type="button" class="btn-sm" data-copy="000-0000-0000">복사</button></li>
+        <li><div><small>신부 어머니</small><p>은행 000-0000-0000</p><p class="muted">○○○</p></div>
+          <button type="button" class="btn-sm" data-copy="000-0000-0000">복사</button></li>
+      </ul>
+    </details>
+  </section>
+
+  <!-- TODO(next): RSVP 섹션 (Pages Functions + D1) -->
+
+  <!-- TODO(next): 방명록 섹션 (Pages Functions + D1) -->
+
+  <!-- 공유 -->
+  <section id="share">
+    <p class="label">Share</p>
+    <div class="share-btns">
+      <button type="button" class="btn btn-fill" id="share-kakao" hidden>카카오톡으로 공유하기</button>
+      <button type="button" class="btn" id="copy-link">청첩장 링크 복사</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>신랑이름 &amp; 신부이름</p>
+  <p data-date="dot">2027.05.15</p>
+</footer>
+
+<dialog id="lightbox" aria-label="사진 크게 보기">
+  <button type="button" class="lb-btn lb-close" id="lb-close" aria-label="닫기">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+  </button>
+  <div class="lb-track" id="lb-track"></div>
+  <button type="button" class="lb-btn lb-prev" id="lb-prev" aria-label="이전 사진">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8"/></svg>
+  </button>
+  <button type="button" class="lb-btn lb-next" id="lb-next" aria-label="다음 사진">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg>
+  </button>
+  <p class="lb-count" aria-live="polite"><span id="lb-index">1</span> / <span id="lb-total">1</span></p>
+</dialog>
+
+<p class="toast" id="toast" role="status" aria-live="polite"></p>
+
+</body>
+</html>
